@@ -8,6 +8,9 @@ body {
   background-color: #0abde3;
 }
 
+/* background-color: #353535; */
+/* color: #c9a365; */
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -23,6 +26,8 @@ code {
 h1 {
   text-align: center;
   color: white;
+  margin-bottom: 80px;
+  margin-top: 50px;
 }
 
 
@@ -115,6 +120,7 @@ form.add input:first-child {
 form.add input:nth-child(2) {
   border-right: none;
   border-left: none;
+  text-align: center;
 }
 form.add button {
   border-right: none;

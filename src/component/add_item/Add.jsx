@@ -15,12 +15,14 @@ class Add extends Component {
 
   handelSubmit = (e) => {
     e.preventDefault()
-    this.props.addItem(this.state)
-    this.setState({
-      name : '', 
-      age : ''
-    })
-    this.focusInput()
+    if (this.state.name && this.state.age) {
+      this.props.addItem(this.state)
+      this.setState({
+        name : '', 
+        age : ''
+      })
+      this.focusInput()
+    }
   }
 
   focusInput = () => {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Items from './component/items/Items';
 import Add from './component/add_item/Add';
-import './App.css';
 
 class App extends Component {
 
@@ -22,7 +21,7 @@ class App extends Component {
 
   addItem = (item) => {
     item.id = this.state.items.length + 1
-    
+
     let items = this.state.items
     
     items.push(item)
@@ -30,8 +29,6 @@ class App extends Component {
     this.setState({
       items 
     })
-
-
   }
 
   render() {
