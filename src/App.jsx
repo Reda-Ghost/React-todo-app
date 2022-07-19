@@ -11,7 +11,6 @@ class App extends Component {
       {id: 2, name: 'Saido', age: 28},
       {id: 3, name: 'Kheira', age: 18}
     ],
-    message : 'No Items Found'
   }
 
   deleteItem = (id) => {
@@ -21,11 +20,26 @@ class App extends Component {
     })
   }
 
+  addItem = (item) => {
+    item.id = this.state.items.length + 1
+    
+    let items = this.state.items
+    
+    items.push(item)
+
+    this.setState({
+      items 
+    })
+
+
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className='main-title'>ToDo App</h1>
         <Items data={this.state.items} deleteItem={this.deleteItem}/>
+        <Add addItem = {this.addItem}/>
       </div>
     )
   }
